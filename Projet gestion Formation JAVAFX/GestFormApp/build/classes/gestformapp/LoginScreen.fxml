@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="770.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestform.controllers.LoginScreenController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="10.0" prefHeight="572.0" prefWidth="579.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <AnchorPane layoutX="296.0" layoutY="33.0" maxWidth="294.0" prefHeight="398.0" prefWidth="294.0" style="-fx-background-color: white; -fx-background-radius: 15;" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="33.0">
+               <children>
+                  <Label layoutX="89.0" layoutY="139.0" text="Identifiant" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="144.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="89.0" layoutY="198.0" text="Mot de passe">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="idField" layoutX="87.0" layoutY="158.0" maxWidth="184.0" minWidth="184.0" prefHeight="31.0" prefWidth="184.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="21.0">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="passField" layoutX="87.0" layoutY="226.0" maxWidth="184.0" minWidth="184.0" prefHeight="31.0" prefWidth="184.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="21.0">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="loginBtn" layoutX="131.0" layoutY="286.0" maxWidth="10.0" onAction="#Login" style="-fx-border-color: black;" text="Connexion" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="86.0" />
+                  <Label fx:id="messageTxt" layoutX="94.0" layoutY="269.0" prefHeight="17.0" prefWidth="170.0" textFill="RED" />
+                  <Label layoutX="69.0" layoutY="32.0" text="Connexion" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="32.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="exitBtn" layoutX="336.0" layoutY="3.0" onAction="#exit" text="X">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#a8a8a8" />
+                              <Stop color="#2f2f2f" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="34.0" prefHeight="440.0" prefWidth="313.0" style="-fx-background-color: linear-gradient(to right top, #ee0092, #ff376f, #ff6a4d, #ff9a31, #ffc529, #ffce4f, #ffd76d, #ffe08a, #ffdab7, #ffe1e7, #fff2ff, #ffffff); -fx-background-radius: 15;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="19.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <VBox layoutX="55.0" layoutY="187.0" prefHeight="66.0" prefWidth="203.0" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="187.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Formation Manager" textOverrun="CLIP">
+                           <font>
+                              <Font name="Century Gothic Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="24.0" prefWidth="247.0" text="Gestion complete de formation !" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Nova Cond Light Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="181.0" fitWidth="184.0" layoutX="65.0" layoutY="245.0">
+                     <image>
+                        <Image url="@icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

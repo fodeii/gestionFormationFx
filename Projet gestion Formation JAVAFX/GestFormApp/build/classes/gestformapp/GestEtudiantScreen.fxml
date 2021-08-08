@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestform.controllers.GestEtudiantScreenController">
+   <children>
+      <AnchorPane prefHeight="38.0" prefWidth="770.0" style="-fx-background-color: linear-gradient(to right top, #ee0092, #ff376f, #ff6a4d, #ff9a31, #ffc529, #ffce4f, #ffd76d, #ffe08a, #ffdab7, #ffe1e7, #fff2ff, #ffffff);" />
+      <TableView fx:id="tableEtudiant" layoutX="15.0" layoutY="81.0" prefHeight="266.0" prefWidth="745.0">
+         <columns>
+            <TableColumn fx:id="matCol" prefWidth="60.0" text="Matricule" />
+            <TableColumn fx:id="nomCol" prefWidth="89.0" text="Nom" />
+            <TableColumn fx:id="prenomCol" prefWidth="122.0" text="Prenom" />
+            <TableColumn fx:id="DateNaissCol" prefWidth="109.0" text="Date de Naissance" />
+            <TableColumn fx:id="telCol" prefWidth="86.0" text="Adresse" />
+            <TableColumn fx:id="mailCol" prefWidth="96.0" text="Telephone" />
+            <TableColumn fx:id="adresseCol" prefWidth="107.0" text="E-mail" />
+            <TableColumn fx:id="niveauCol" prefWidth="75.0" text="Niveau" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="addBtn" layoutX="263.0" layoutY="561.0" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="74.0" style="-fx-border-color: grey;" text="Ajouter" />
+      <JFXButton fx:id="editBtn" layoutX="350.0" layoutY="561.0" onAction="#handleButtonAction" prefWidth="74.0" style="-fx-border-color: grey;" text="Modifier" />
+      <JFXButton fx:id="delBtn" layoutX="439.0" layoutY="561.0" onAction="#handleButtonAction" prefWidth="74.0" style="-fx-border-color: grey;" text="Supprimer" />
+      <Label layoutX="46.0" layoutY="12.0" text="Formation Manager - Gestion Etudiant">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="12.0" layoutY="6.0">
+         <image>
+            <Image url="@icon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="RetourBtn" layoutX="695.0" layoutY="562.0" onAction="#retour" text="Retour">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="26.0" layoutY="364.0" text="Matricule">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="466.0" text="Prenom">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="414.0" text="Nom">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="364.0" text="Date de naissance">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="466.0" text="Email">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="414.0" text="Telephone">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="telField" layoutX="468.0" layoutY="405.0" maxWidth="227.0" minWidth="227.0" prefHeight="31.0" prefWidth="227.0" />
+      <JFXTextField fx:id="mailField" layoutX="468.0" layoutY="457.0" maxWidth="227.0" minWidth="227.0" prefHeight="31.0" prefWidth="227.0" />
+      <JFXTextField fx:id="nomField" layoutX="109.0" layoutY="401.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXTextField fx:id="prenomField" layoutX="109.0" layoutY="453.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXTextField fx:id="matField" layoutX="109.0" layoutY="350.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXComboBox fx:id="comboFil" layoutX="476.0" layoutY="506.0" prefHeight="25.0" prefWidth="132.0" />
+      <Label layoutX="408.0" layoutY="510.0" text="Niveau">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="516.0" text="Adresse">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="adresseFil" layoutX="109.0" layoutY="503.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXDatePicker fx:id="ddnFil" layoutX="468.0" layoutY="350.0" prefHeight="31.0" prefWidth="260.0" />
+      <JFXButton fx:id="searchBtn" layoutX="182.0" layoutY="47.0" onAction="#handleButtonAction" prefHeight="17.0" prefWidth="28.0" text=" " />
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="182.0" layoutY="45.0">
+         <image>
+            <Image url="@search_icon_125165.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="searchFil" layoutX="26.0" layoutY="45.0" promptText="Saisir matricule" />
+   </children>
+</AnchorPane>
